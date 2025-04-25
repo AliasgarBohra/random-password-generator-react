@@ -49,7 +49,7 @@ function PasswordGenerator() {
 
     return (
         <>
-            <div className="w-screen h-screen bg-gray-500 flex items-center justify-center px-6 py-10">
+            <div className="w-screen min-h-screen bg-gray-500 flex items-center justify-center px-6 py-10">
                 <div className="w-full max-w-screen-lg mx-auto shadow-2xl rounded-3xl px-12 py-10 bg-gray-700">
                     <h1 className="text-white text-center text-4xl font-bold mb-10 tracking-wide">
                         Random Password Generator
