@@ -28,7 +28,7 @@ A sleek, responsive **Random Password Generator** built with **React** and **Tai
 
 - [React](https://reactjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
-- [Vite](https://vitejs.dev/) *(if you're using it)*
+- [Vite](https://vitejs.dev/)
 
 ---
 
