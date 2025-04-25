@@ -4,6 +4,10 @@ A sleek, responsive **Random Password Generator** built with **React** and **Tai
 
 ---
 
+## Live Demo
+https://passwordgeneratorunlimited.netlify.app/
+---
+
 ## 🚀 Features
 
 - ✅ Real-time password generation
