@@ -14,7 +14,6 @@ function PasswordGenerator() {
         let pass = [];
         let required = [];
 
-        // Add optional character sets and ensure at least one is included
         if (numbersAllowed) {
             const numbers = "1234567890";
             str += numbers;
@@ -27,12 +26,10 @@ function PasswordGenerator() {
             required.push(specialChars[Math.floor(Math.random() * specialChars.length)]);
         }
 
-        // Fill the rest of the password
         for (let i = 0; i < length - required.length; i++) {
             pass.push(str[Math.floor(Math.random() * str.length)]);
         }
 
-        // Add required characters to the password
         pass = pass.concat(required);
 
         // Shuffle the result
@@ -81,7 +78,6 @@ function PasswordGenerator() {
                         </button>
                     </div>
 
-                    {/* Centered Length Slider */}
                     <div className="flex flex-col sm:flex-row sm:justify-center items-center gap-x-5 gap-y-4 mb-10 text-center">
                         <label className="text-white text-2xl font-medium">Length:</label>
                         <input
@@ -98,8 +94,6 @@ function PasswordGenerator() {
                         <span className="text-white font-bold text-2xl">{length}</span>
                     </div>
 
-
-                    {/* Centered Checkboxes */}
                     <div className="flex justify-center gap-x-16">
                         <div className="flex items-center gap-x-4">
                             <input
