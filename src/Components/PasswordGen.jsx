@@ -55,28 +55,31 @@ function PasswordGenerator() {
                         Random Password Generator
                     </h1>
 
-                    <div className="flex shadow-xl rounded-2xl overflow-hidden mb-8">
+                    <div className="flex flex-col sm:flex-row shadow-xl rounded-2xl overflow-hidden mb-8 w-full">
                         <input
                             type="text"
                             value={password}
-                            className="outline-none w-full py-4 px-5 text-3xl bg-white font-mono"
+                            className="outline-none w-full py-4 px-5 text-4xl bg-white font-mono"
                             placeholder="Password"
                             readOnly
                         />
-                        <button
-                            onClick={generatePassword}
-                            className="px-6 py-4 shrink-0 bg-blue-600 text-white text-5xl hover:bg-blue-700 transition"
-                        >
-                            ⟳
-                        </button>
-                        <button
-                            onClick={copyPassToClip}
-                            className={`px-6 py-4 shrink-0 text-3xl transition font-semibold outline-3 outline-gray-700 ${copied ? "bg-gray-400" : "bg-blue-600 hover:bg-blue-700"
-                                } text-white`}
-                        >
-                            {copied ? "Copied!" : "Copy"}
-                        </button>
+                        <div className="flex sm:flex-row flex-col sm:w-auto w-full">
+                            <button
+                                onClick={generatePassword}
+                                className="sm:px-6 px-4 sm:py-4 py-3 bg-blue-600 text-white text-3xl hover:bg-blue-700 transition w-full sm:w-auto"
+                            >
+                                ⟳
+                            </button>
+                            <button
+                                onClick={copyPassToClip}
+                                className={`sm:px-6 px-4 sm:py-4 py-3 text-2xl font-semibold outline-4 outline-gray-700 transition w-full sm:w-auto ${copied ? "bg-gray-400" : "bg-blue-600 hover:bg-blue-700"
+                                    } text-white`}
+                            >
+                                {copied ? "Copied!" : "Copy"}
+                            </button>
+                        </div>
                     </div>
+
 
                     <div className="flex flex-col sm:flex-row sm:justify-center items-center gap-x-5 gap-y-4 mb-10 text-center">
                         <label className="text-white text-2xl font-medium">Length:</label>
@@ -95,25 +98,28 @@ function PasswordGenerator() {
                     </div>
 
                     <div className="flex justify-center gap-x-16">
-                        <div className="flex items-center gap-x-4">
-                            <input
-                                type="checkbox"
-                                checked={numbersAllowed}
-                                onChange={() => setNumbersAllowed((prev) => !prev)}
-                                className="w-6 h-6"
-                            />
-                            <label className="text-white text-2xl">Include Numbers</label>
+                        <div className="flex flex-col sm:flex-row justify-center items-center gap-x-10 gap-y-6">
+                            <div className="flex items-center gap-x-4">
+                                <input
+                                    type="checkbox"
+                                    checked={numbersAllowed}
+                                    onChange={() => setNumbersAllowed((prev) => !prev)}
+                                    className="w-6 h-6"
+                                />
+                                <label className="text-white text-2xl">Include Numbers</label>
+                            </div>
+
+                            <div className="flex items-center gap-x-4">
+                                <input
+                                    type="checkbox"
+                                    checked={charAllowed}
+                                    onChange={() => setChatAllowed((prev) => !prev)}
+                                    className="w-6 h-6"
+                                />
+                                <label className="text-white text-2xl">Include Special Characters</label>
+                            </div>
                         </div>
 
-                        <div className="flex items-center gap-x-4">
-                            <input
-                                type="checkbox"
-                                checked={charAllowed}
-                                onChange={() => setChatAllowed((prev) => !prev)}
-                                className="w-6 h-6"
-                            />
-                            <label className="text-white text-2xl">Include Special Characters</label>
-                        </div>
                     </div>
                 </div>
             </div>
